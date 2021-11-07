@@ -1,0 +1,41 @@
+#include<stdio.h>
+int binary_search1(int a[], int high,int low,int element){
+int mid;
+    if(low<=high){
+        mid = (low+high)/2;
+        if(a[mid]<element){
+            low = mid+1;
+            return binary_search1(a,low,high,element);
+        }
+        else if(a[mid]>element){
+            high = mid -1;
+            return binary_search1(a,low,high,element);
+        }
+        else{
+            return mid;
+        }
+    }
+    else{
+        return -1;
+    }
+}
+int main(){
+    int a[30],n,i,element,pos;
+    printf("enter no of elements:");
+    scanf("%d",&n);
+    printf("enter elements:");
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    printf("enter element to be searched:");
+    scanf("%d",&element);
+    int low =0;
+    int high = n-1;
+    pos = binary_search1(a,high,low,element);
+    if(pos == -1){
+        printf("element not found");
+    }
+    else{
+        printf("element found at position %d",pos+1);
+    }
+}
