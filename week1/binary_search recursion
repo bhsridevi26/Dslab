@@ -5,11 +5,11 @@ int mid;
         mid = (low+high)/2;
         if(a[mid]<element){
             low = mid+1;
-            return binary_search1(a,low,high,element);
+            return binary_search1(a,high,low,element);
         }
         else if(a[mid]>element){
             high = mid -1;
-            return binary_search1(a,low,high,element);
+            return binary_search1(a,high,low,element);
         }
         else{
             return mid;
@@ -39,3 +39,24 @@ int main(){
         printf("element found at position %d",pos+1);
     }
 }
+
+
+
+output:
+enter no of elements:4
+enter elements:1
+2
+3
+4
+enter element to be searched:4
+element found at position 4
+
+
+enter no of elements:5
+enter elements:1
+3
+5
+7
+8
+enter element to be searched:9
+element not found
