@@ -33,5 +33,30 @@ int main(){
     }
     else{
         printf("element found at position %d",pos+1);
+
     }
 }
+
+
+
+output:
+enter no of elements:6
+enter sorted elements:1
+2
+3
+4
+5
+6
+enter element to be searched:6
+element found at position 6
+
+
+enter no of elements:4
+enter sorted elements:1
+6
+8
+9
+enter element to be searched:2
+element not found
+
+
