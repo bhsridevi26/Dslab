@@ -33,3 +33,24 @@ int main(){
         printf("element found at position %d",pos+1);
     }
 }
+
+
+output:
+enter number of elements:4
+enter elements:17
+23
+4
+56
+enter element to be searched:4
+element found at position 3
+
+
+
+enter number of elements:5
+enter elements:1
+2
+4
+9
+3
+enter element to be searched:6
+element not found
