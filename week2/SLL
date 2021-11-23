@@ -123,35 +123,39 @@ void reverse_display(struct node *head)
         printf("%d->",head->data);
     }
 }
-int searching(struct node*head,int key)
- {
-         int c = 1;
-         temp = head;
-         while(temp != NULL);
-         {   if(key == temp->data){
-                 return c;}
-         temp = temp->link;
-         c++;
-         }
-     return -1;
- }
 
- struct node*sorting(struct node*head)
- {
-         temp = head;
-         while(temp != NULL){
-         t1 = head;
-         while(t1){
-         if(t1->data > t1->link->data){
-                int x = t1->data;
-                 t1->data = t1->link->data;
-                 t1->link->data = x;
-             }
+int search(struct node *head,int key){
+    int c = 1;
+    temp = head;
+    while(temp != NULL){
+        if(temp -> data == key){
+            return c;
         }
-         temp = temp->link;
-     }
- return head;
- }
+        temp = temp -> link;
+        c++;
+        }
+        return -1;
+}
+
+ 
+ struct node *sort(struct node *head){
+    int x;
+    temp = head;
+    while(temp != NULL){
+        temp1 = temp -> link;
+        while(temp1 != NULL){
+            if(temp -> data > temp1 -> data){
+                x = temp -> data;
+                temp -> data = temp1 -> data;
+                temp1 -> data = x;
+            }
+            temp1 = temp1 -> link;
+        }
+        temp = temp -> link;
+    }
+    return head;
+}
+
 
 int main(){
     struct node *head;
@@ -279,6 +283,69 @@ enter your choice
 enter your choice
 9
 20->22->24->26
+
+enter your choice
+1
+enter no of nodes5
+10
+29
+30
+49
+70
+1-create
+ 2-insert_begin
+ 3-insert_end
+ 4-insert_pos
+ 5-delete_begin
+ 6-delete_end
+ 7-delete_pos
+ 8-display
+ 9-reverse_display
+ 10-search
+ 11-sort
+  12-exit
+enter your choice
+10
+30
+element at 3
+
+enter your choice
+1
+enter no of nodes5
+20
+30
+50
+40
+10
+1-create
+ 2-insert_begin
+ 3-insert_end
+ 4-insert_pos
+ 5-delete_begin
+ 6-delete_end
+ 7-delete_pos
+ 8-display
+ 9-reverse_display
+ 10-search
+ 11-sort
+  12-exit
+enter your choice
+11
+1-create
+ 2-insert_begin
+ 3-insert_end
+ 4-insert_pos
+ 5-delete_begin
+ 6-delete_end
+ 7-delete_pos
+ 8-display
+ 9-reverse_display
+ 10-search
+ 11-sort
+  12-exit
+enter your choice
+8
+10 -> 20 -> 30 -> 40 -> 50 
 
 
 
