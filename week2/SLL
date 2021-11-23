@@ -199,7 +199,7 @@ int main(){
                             printf("element at %d",pos);
                     }
                     break;
-            case 11: head = sorting(head);
+            case 11: head = sort(head);
                      break;
             case 12: exit(0);
 
@@ -288,10 +288,10 @@ enter your choice
 1
 enter no of nodes5
 10
-29
+20
 30
-49
-70
+40
+50
 1-create
  2-insert_begin
  3-insert_end
