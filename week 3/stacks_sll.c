@@ -193,3 +193,32 @@ enter your choice:4
 5 = exit
 enter your choice:5
 
+#underflow
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:1
+enter element to be inserted:10
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:2
+deleted element 10
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:3
+stack underflow
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:2
+stack is underflow
