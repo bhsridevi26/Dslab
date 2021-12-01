@@ -80,3 +80,116 @@ int main()
    }
  }
 
+OUTPUT:
+ 
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:1
+enter element to be inserted:2
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:4
+2
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:1
+enter element to be inserted:4
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:4
+4
+2
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:1
+enter element to be inserted:6
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:4
+6
+4
+2
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:1
+enter element to be inserted:8
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:4
+8
+6
+4
+2
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:1 
+enter element to be inserted:10
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:4
+10
+8
+6
+4
+2
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:2
+deleted element 10
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:3
+Top element is 8
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:4
+8
+6
+4
+2
+1 = push
+2 = pop
+3 = peek
+4 = display
+5 = exit
+enter your choice:5
+
