@@ -1,0 +1,79 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+        int data;
+        struct node* link;
+};
+struct node* front = NULL, *rear = NULL, *cur;
+void enqueue()
+{
+        cur = (struct node *)malloc(sizeof(struct node));
+        printf("enter current data");
+        scanf("%d",&cur->data);
+        cur->link = NULL;
+        if(front == NULL){
+                front = rear = cur;
+        }
+        else{
+                rear->link = cur;
+                rear = cur;
+        }
+}
+void dequeue()
+{
+        if(front == NULL){
+                printf("Queue empty");
+        }
+        else if(front == rear)
+        {
+                printf("deleted element %d",front->data);
+                front = rear = NULL;
+        }
+
+
+       else{
+                printf("deleted element %d",front->data);
+                front = front->link;
+        }
+}
+void display()
+{
+        if(front == NULL){
+                printf("Queue is empty");
+        }
+        else
+        {       cur = front;
+                while(cur != NULL)
+                {
+                        printf("%d",cur->data);
+                        cur = cur->link;
+                }
+        }
+}
+
+int main(){
+        int ch, ele;
+        while(1){
+                printf("1 = enqueue\n2 = dequeue\n3 = display\n4 = exit\n");
+                printf("enter your choice:");
+                scanf("%d",&ch);
+                switch(ch){
+                        case 1:
+                                printf("enter element to be inserted:");
+                                scanf("%d",&ele);
+                                enqueue(ele);
+                                break;
+                        case 2:
+                                printf("deletd element %d\n",dequeue());
+                                dequeue();
+                                break;
+                        case 3: if(front == NULL){
+                                        printf("Queue Empty\n");}
+                                else{
+                                        display();}
+                                break;
+                        case 4: exit(0);
+                }
+        }
+}
