@@ -56,9 +56,7 @@ int main(){
                 }
         }
 }
-                                                                                                                                                      20,10-24      Bot
-
-
+                                                                                                                                                    
 OUTPUT:
 
 1 = enqueue
