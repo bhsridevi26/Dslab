@@ -85,3 +85,80 @@ int main(){
     }
 }
 
+OUTPUT:
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:1 
+78
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:1
+32
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:1
+60
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:1
+89
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:1
+46
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:1
+92
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:1
+53
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:2
+78 32 60 46 53 89 92 
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:3
+32 46 53 60 78 89 92 
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:4
+53 46 60 32 92 89 78 
+1-Create
+2-Preorder
+3-Inorder
+4-Postorder
+5-Exit
+Enter your choice:5
