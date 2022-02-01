@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include<stdlib.h>
 struct node{
@@ -68,8 +69,8 @@ return head;
     return head;
  }
  
-// delete
-struct node* delete(struct node*head){
+// delete at begin
+struct node* delete_begin(struct node*head){
     temp = head;
     while(temp->link != head){
         temp = temp->link;
@@ -81,6 +82,18 @@ struct node* delete(struct node*head){
     free(t1);
     return head;
     
+}
+//delete at end
+struct node *delete_end(struct node *head){
+	temp = head;
+	while(temp -> link != head){
+		temp1 = temp;
+		temp = temp -> link;
+	}
+	temp1 -> link = head;
+	printf("deleted element %d\n", temp -> data);
+	free(temp);
+	return head;
 }
  
 //delete at pos
@@ -99,25 +112,22 @@ struct node* delete_pos(struct node* head, int pos){
 }
 
 //display
-void display(){  
-    struct node *temp = head;  
-    if(temp == NULL){  
-        printf("List is empty\n");  
-    }  
-    else{  
-         do{
-            printf("%d->", temp->data);  
-            temp = temp->link;  
-        }while(temp != head);  
-        printf("\n");  
-    }  
-}  
+void display(struct node *head){
+	temp = head;
+	while(temp -> link != head){
+		printf("%d -> ", temp -> data);
+		temp = temp -> link;
+	}
+	printf("%d -> ", temp -> data);
+	printf("\n");
+}
+
 int main(){
     struct node *head;
     int ch,ele,pos,key;
     while(1)
     {
-        printf("1-create\n2-insert_begin\n3-insert_end\n4-insert_pos\n5-delete\n6-delete_pos\n7-display\n8=exit\n");
+        printf("1-create\n2-insert_begin\n3-insert_end\n4-insert_pos\n5-delete_begin\n6-delete_end\n7-delete_pos\n8-display\n9=exit\n");
         printf("enter your choice\n");
         scanf("%d",&ch);
         switch(ch)
@@ -133,14 +143,17 @@ int main(){
             case 4: scanf("%d %d",&ele,&pos);
                    head=insert_pos(pos,ele);
                    break;
-            case 5: head= delete(head);
+            case 5: head= delete_begin(head);
                    break;
-            case 6: scanf("%d",&pos);
+            case 6:
+			       head = delete_end(head);
+			       break;
+            case 7: scanf("%d",&pos);
                    head= delete_pos(head,pos);
                    break;
-            case 7: display();
+            case 8: display(head);
                    break;
-            case 8: exit(0);
+            case 9: exit(0);
 
 
 
@@ -149,16 +162,16 @@ int main(){
 }
 
 
-
 OUTPUT:
 1-create
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
 1
 5
@@ -171,21 +184,23 @@ enter your choice
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
-7
-5->10->15->20->25->
+8
+5 -> 10 -> 15 -> 20 -> 25 -> 
 1-create
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
 2
 1
@@ -193,21 +208,23 @@ enter your choice
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
-7
-1->5->10->15->20->25->
+8
+1 -> 5 -> 10 -> 15 -> 20 -> 25 -> 
 1-create
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
 3
 50
@@ -215,21 +232,23 @@ enter your choice
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
-7
-1->5->10->15->20->25->50->
+8
+1 -> 5 -> 10 -> 15 -> 20 -> 25 -> 50 -> 
 1-create
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
 4
 3
@@ -238,44 +257,95 @@ enter your choice
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
-7
-1->5->10->3->15->20->25->50->
+8
+1 -> 5 -> 10 -> 3 -> 15 -> 20 -> 25 -> 50 -> 
 1-create
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
 5
 deleted element is 1
-
 1-create
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
+enter your choice
+8
+5 -> 10 -> 3 -> 15 -> 20 -> 25 -> 50 -> 
+1-create
+2-insert_begin
+3-insert_end
+4-insert_pos
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
 6
+deleted element 50
+1-create
+2-insert_begin
+3-insert_end
+4-insert_pos
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
+enter your choice
+8
+5 -> 10 -> 3 -> 15 -> 20 -> 25 -> 
+1-create
+2-insert_begin
+3-insert_end
+4-insert_pos
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
+enter your choice
+7
 4
 deleted ele 15
 1-create
 2-insert_begin
 3-insert_end
 4-insert_pos
-5-delete
-6-delete_pos
-7-display
-8=exit
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
 enter your choice
 8
+5 -> 10 -> 3 -> 20 -> 25 -> 
+1-create
+2-insert_begin
+3-insert_end
+4-insert_pos
+5-delete_begin
+6-delete_end
+7-delete_pos
+8-display
+9=exit
+enter your choice
+9
