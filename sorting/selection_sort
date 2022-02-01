@@ -1,0 +1,44 @@
+void selectionsort(int a[],int n){
+    int i,j,minpos,x;
+    for(i = 0;i<n;i++){
+        minpos = i;
+        for(j = i+1; j<n; j++){
+            if(a[j] < a[minpos]){
+                minpos = j;
+            }
+        }
+        x = a[minpos];
+        a[minpos] = a[i];
+        a[i] = x;
+    }
+}
+int main(){
+    int n,i;
+    printf("enter size: ");
+    scanf("%d",&n);
+    int a[n];
+    printf("enter array of elements\n");
+    for(i = 0;i < n; i++){
+        scanf("%d",&a[i]);
+    }
+    selectionsort(a,n);
+    printf("sorted elements:\n");
+    for(i = 0; i<n;i++){
+        printf("%d  ",a[i]);
+    }
+}
+
+
+
+OUTPUT:
+enter size: 8
+enter array of elements
+98 76 12 45 2 26 38 21
+sorted elements:
+2  12  21  26  38  45  76  98 
+
+enter size: 5
+enter array of elements
+60 48 12 23 9
+sorted elements:
+9  12  23  48  60 
