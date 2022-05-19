@@ -82,3 +82,22 @@ enter allocated resources0 1 0
 enter available resources3 3 2
 p2	p3	p4	p5	p1	
 process is in safe state
+
+
+
+output2:
+enter number of processors:5
+enter number of resources3
+enter maximum resources needed for each processor0 1 0
+4 0 2
+3 0 4
+3 1 1
+0 0 4
+enter allocated resources0 1 0
+2 0 0
+3 0 3
+2 1 1
+0 0 2
+enter available resources0 0 0
+p1	
+process is not in safe state
